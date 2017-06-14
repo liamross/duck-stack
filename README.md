@@ -50,7 +50,7 @@ For example, rather than having:
 `export const REDUCER_TYPE_ONE = 'REDUCER_TYPE_ONE'`  
 you could have something like:  
 `export const REDUCER_TYPE_ONE = 'appname/component/REDUCER_TYPE_ONE'`  
-For this proposal, however, I'll keep it simple with the first one.
+For this proposal, however, I'll keep it simple with the first one. Remember, as long as you reference the actiontype imported from this file whenever you need an action type, you can change the string in this file at any point and it won't break anything.
 
 ```javascript
 // Reducer action types.
