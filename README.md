@@ -4,13 +4,13 @@ A ducks proposal of structuring React+Redux projects that encourages reusability
 
 ### Table of Contents:
 
-[Folder Structure](folder-structure)
+[Folder Structure](#folder-structure)
 
-[Files](files)
+[Files](#files)
 
-[Nesting Components](nesting-components)
+[Nesting Components](#nesting-components)
 
-[Import Syntax](import-syntax)
+[Import Syntax](#import-syntax)
 
 ---
 
