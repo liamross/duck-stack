@@ -41,7 +41,7 @@ ComponentName
 
 ## Files
 
-The contents of each file referenced in the 
+The contents of each file referenced in the folder structure.
 
 ### actiontypes.js
 
