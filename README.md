@@ -122,7 +122,7 @@ export function* sagaTypeOne(action) {
 
 Both of these files are as they would be usually, both export default their main class / jsx component. The only difference is that *EVERY* action dispatched *MUST* be created using an action creator imported from './actions'.
 
-> Note: Situations may arise where more than one component needed by the `container.jsx` file. In situations such as these, the naming of the component files could reflect their function, as they are only imported by `container.jsx`. However, the `container.jsx` file should maintain its name, as there is only one per component folder, and it is imported by the index file, which should never be changed.
+> Note: Situations may arise where more than one component needed is by the `container.jsx` file. In situations such as these, the naming of the component files could reflect their function, as they are only imported by `container.jsx`. However, the `container.jsx` file should maintain its name, as there is only one per component folder, and it is imported by the index file, which should never be changed.
 
 ```javascript
 import React, { Component } from 'react';
