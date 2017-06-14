@@ -35,8 +35,6 @@ ComponentName
 └── index.js
 ```
 
-> Note: Situations may arise where more than one component needed by the `container.jsx` file. In situations such as these, the naming of the component files could reflect their function, as they are only imported by t`container.jsx`. However, the `container.jsx` file should maintain its name, as there is only one per component folder, and it is imported by the index file, which should never be changed.
-
 ---
 
 ## Files
@@ -122,10 +120,20 @@ export function* sagaTypeOne(action) {
 
 ### container.jsx and component.jsx
 
-Both of these files are as they would be usually, both export default their main class / jsx component. The only difference is that *EVERY* action dispatched *MUST* be created using an action creator imported from './actions' in the following form:
+Both of these files are as they would be usually, both export default their main class / jsx component. The only difference is that *EVERY* action dispatched *MUST* be created using an action creator imported from './actions'.
+
+> Note: Situations may arise where more than one component needed by the `container.jsx` file. In situations such as these, the naming of the component files could reflect their function, as they are only imported by `container.jsx`. However, the `container.jsx` file should maintain its name, as there is only one per component folder, and it is imported by the index file, which should never be changed.
 
 ```javascript
-import * as a from './actions';
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import * as a from './actions';     
+// Alternatively, you can directly reference the actions.
+import { reducerTypeOne } from './actions';
+// If you need actions from other components, they would be imported like this:
+import OtherComponent from '../OtherComponent';
+// They would then be used like this:
+// OtherComponent.actions.someActionCreatorFunction(something);
 
 // Your component goes here (export default using connect)
 
