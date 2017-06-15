@@ -11,13 +11,19 @@ A proposal of structuring React+Redux projects that encourages re-usability and 
 
 ### Table of Contents:
 
-[Folder Structure](#folder-structure)
+- [Folder Structure](#folder-structure)
+- [Files](#files)
+  - [actiontypes.js](#actiontypesjs)
+  - [actions.js](#actionsjs)
+  - [reducer.js](#reducerjs)
+  - [sagas.js](#sagasjs)
+  - [container.jsx and component.jsx](#containerjsx-and-componentjsx)
+  - [index.js](#indexjs)
+- [Nesting Components](#nesting-components)
+- [Import Syntax](#import-syntax)
 
-[Files](#files)
 
-[Nesting Components](#nesting-components)
 
-[Import Syntax](#import-syntax)
 
 ---
 
