@@ -1,11 +1,11 @@
-# New Ducks
+# DuckStack
 
 #### First, some influences and reasoning.
 
 Many people who are planning to organize a React + Redux project may be familiar with Erik Rasmussen  [ducks-modular-redux](https://github.com/erikras/ducks-modular-redux) proposal, which outlines the basis of organizing code by function rather than by components, reducers, etc. I personally ran into issues when trying to implement this in my own projects; namely, it becomes cluttered when working with larger components and has no solutions in-place for React components.  
 Looking for alternatives, I stumbled upon Jack Hsu's [Rules for Structuring Redux Applications](https://jaysoo.ca/2016/02/28/organizing-redux-application/). This extends the ducks idea further to fully flesh-out the separation of actions, actiontypes and reducers, as well as including all other files related to a component within the ducks module. However the unnecessary files and structure over-complicated what should be a simple to set-up, and easily-repeatable template. 
 
-#### So what is new-ducks?
+#### So what is duck-stack?
 
 A ducks proposal of structuring React+Redux projects that encourages re-usability and streamlines the export process, while keeping each ducks module as simple as possible. It combines all files related to a single component into one ducks module (folder), and utilizes an `index.js` file at each level to manage exports. Additionally, same-name files and a static index file allow you to reuse the same template folder for every component, drastically lowering set-up time.
 
@@ -42,7 +42,7 @@ ComponentName
 └── index.js
 ```
 
-For a template set up to use new-ducks structure, see my [redux boilerplate](https://github.com/liamross/redux-boiler-lint) with linting. Additionally, see the new-ducks template folder in this project.
+For a template set up to use duck-stack structure, see my [redux boilerplate](https://github.com/liamross/redux-boiler-lint) with linting. Additionally, see the duck-stack template folder in this project.
 
 ---
 
