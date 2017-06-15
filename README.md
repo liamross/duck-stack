@@ -229,3 +229,6 @@ ComponentName.sagas.sagaTypeOne;
 ParentName.ChildName.actiontypes.CHILD_ACTION;
 ```
 
+---
+
+Liam
