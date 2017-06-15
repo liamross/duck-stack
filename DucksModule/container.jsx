@@ -26,16 +26,12 @@ ComponentName.propTypes = {
   
 };
 
-function mapStateToProps(state, ownProps) {
-  return {
+const mapStateToProps = (state, ownProps) => ({
     
-  };
-}
+})
 
-function mapDispatchToProps(dispatch) {
-  return {
-    actions: bindActionCreators(actions, dispatch),
-  };
-}
+const mapDispatchToProps = (dispatch) => ({
+
+})
 
 export default connect(mapStateToProps, mapDispatchToProps)(ComponentName);
