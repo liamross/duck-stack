@@ -234,3 +234,5 @@ ComponentName.sagas.sagaTypeOne;
 // Referencing child component through parent.
 ParentName.ChildName.actiontypes.CHILD_ACTION;
 ```
+> Note: even if your action creator doesn't take a value, make sure to end it with empty brackets! Example:  
+`ComponentName.actions.actionWithNoValue()`
