@@ -228,7 +228,3 @@ ComponentName.sagas.sagaTypeOne;
 // Referencing child component through parent.
 ParentName.ChildName.actiontypes.CHILD_ACTION;
 ```
-
----
-
-Liam
