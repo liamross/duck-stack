@@ -7,7 +7,7 @@ Looking for alternatives, I stumbled upon Jack Hsu's [Rules for Structuring Redu
 
 #### So what is duck-stack?
 
-A ducks proposal of structuring React+Redux projects that encourages re-usability and streamlines the export process, while keeping each ducks module as simple as possible. It combines all files related to a single component into one ducks module (folder), and utilizes an `index.js` file at each level to manage exports. Additionally, same-name files and a static index file allow you to reuse the same template folder for every component, drastically lowering set-up time.
+A proposal of structuring React+Redux projects that encourages re-usability and streamlines the export process, while keeping each duck-stack module as simple as possible. It combines all files related to a single component into one duck-stack module (folder), and utilizes an `index.js` file at each level to manage exports. Additionally, same-name files and a static index file allow you to reuse the same template folder for every component, drastically lowering set-up time.
 
 ### Table of Contents:
 
@@ -23,7 +23,7 @@ A ducks proposal of structuring React+Redux projects that encourages re-usabilit
 
 ## Folder Structure
 
-The basic folder structure of each ducks component folder.
+The basic folder structure of each duck-stack component folder.
 
 **Pros:** Easy setup, index files always remain the same, file names always remain the same, most basic imports between files stay the same.
 
@@ -52,7 +52,7 @@ The contents of each file referenced in the folder structure.
 
 ### actiontypes.js
 
-> Note: Ducks proposes that your action types should be named based on their position within the project.  
+> Note: Traditional ducks proposes that your action types should be named based on their position within the project.  
 For example, rather than having:  
 `export const REDUCER_TYPE_ONE = 'REDUCER_TYPE_ONE'`  
 you could have something like:  
@@ -156,7 +156,7 @@ const mapDispatchToProps = dispatch => ({
 ### index.js
 
 This file never changes. Because the file names are always static all imports in this and other files will always remain the same.
-> Note: A gotcha is that the `import component` actually imports the container. This is because any references to the component will be to the container, and there may be multiple components referenced by the container, meaning their naming will not be static. As such, we export as component for ease, but import in the index as container. This shouldn't cause any problems as long as you're copying an existing ducks folder as a template and not rewriting it yourself.
+> Note: A gotcha is that the `import component` actually imports the container. This is because any references to the component will be to the container, and there may be multiple components referenced by the container, meaning their naming will not be static. As such, we export as component for ease, but import in the index as container. This shouldn't cause any problems as long as you're copying an existing duck-stack module folder as a template and not rewriting it yourself.
 ```javascript
 import * as actions from './actions';
 import * as actiontypes from './actiontypes';
@@ -175,7 +175,7 @@ export default { actions, actiontypes, component, reducer, sagas };
 
 ## Nesting Components
 
-Depending on your state structure and folder organization methodology, you may choose to nest ducks component folders within each other. Generally, since `index.js` files serve to bring the individual files to the surface of your folder structure, this will mean the `index.js` file of the parent folder will need to import, and subsequently export the `index.js` default export of the component below. In cases such as these, you will import the child and export it as an element within the default export.
+Depending on your state structure and folder organization methodology, you may choose to nest duck-stack module folders within each other. Generally, since `index.js` files serve to bring the individual files to the surface of your folder structure, this will mean the `index.js` file of the parent folder will need to import, and subsequently export the `index.js` default export of the component below. In cases such as these, you will import the child and export it as an element within the default export.
 
 > Note: This is generally not recommended, as it reduces component re-usability. The only time you should nest components is if the component is specifically used in the parent component, with no possibility of reuse elsewhere in the application.
 
@@ -201,7 +201,7 @@ export default { actions, actiontypes, component, reducer, sagas, ChildComponent
 
 ## Import syntax
 
-Examples of how to import the elements of a ducks component folder.
+Examples of how to import the elements of a duck-stack module folder.
 
 ```javascript
 // Access the index.js default export.
