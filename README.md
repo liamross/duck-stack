@@ -1,5 +1,7 @@
 # DuckStack
 
+> For snippets, see [Snippets](https://github.com/liamross/duck-stack/blob/master/Snippets.md#visual-studio-code-snippets).
+
 #### First, some influences and reasoning.
 
 Many people who are planning to organize a React + Redux project may be familiar with Erik Rasmussen  [ducks-modular-redux](https://github.com/erikras/ducks-modular-redux) proposal, which outlines the basis of organizing code by function rather than by components, reducers, etc. I personally ran into issues when trying to implement this in my own projects; namely, it becomes cluttered when working with larger components and has no solutions in-place for React components.  
