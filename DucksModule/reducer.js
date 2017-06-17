@@ -2,7 +2,7 @@ import * as t from './actiontypes';
 
 export const defaultState = {};
 
-export default (state = defaultState) => {
+export default (state = defaultState, action) => {
   switch (action.type) {
     case t.REDUCER_TYPE_ONE:
       // do something with action.value
