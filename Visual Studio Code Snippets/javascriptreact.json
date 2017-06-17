@@ -8,7 +8,7 @@
       "import ${1:ComponentName} from './component'",
       "import * as actions from './actions'",
       "",
-      "class ${2:ContainerName} extends React.Component {",
+      "class ${2:ContainerName} extends Component {",
       "\tcomponentWillMount() {",
       "\t\t$3",
       "\t}",
