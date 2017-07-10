@@ -1,5 +1,7 @@
 # DuckStack
 
+> This no longer represents my favorite approach for Redux, however I will leave it up for reference. I prefer containers with no JSX content, that simply contain all the Redux state or dispatch mapped props, and import the React Component to use with Redux's connect. Additionally, in some situations it is very suitable to have a single file entitled 'Redux' that contains actions, action types, a reducer, and sagas. This avoids excessive import statements and allows for a single page to reference. I've moved away from the index file for now, but may return to that as a means of managing big projects. I will likely publish something with regards to this new ideology.
+
 > For snippets, see [Snippets](https://github.com/liamross/duck-stack/blob/master/Snippets.md#visual-studio-code-snippets).
 
 #### First, some influences and reasoning.
